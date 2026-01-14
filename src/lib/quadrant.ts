@@ -1,51 +1,52 @@
-import dotenv from "dotenv";
-dotenv.config({ path: ".env" });
-
 import { QdrantVectorStore } from "@langchain/qdrant";
 import { QdrantClient } from "@qdrant/js-client-rest";
-import { openaiEmbeddings } from "./ai/openai";
+import { getOpenAIEmbeddings } from "./ai/openai";
 
-const API_KEY = process.env.QDRANT_API_KEY;
-const URL = process.env.QDRANT_URL;
-const COLLECTION_NAME = process.env.QDRANT_DB_COLLECTION_NAME;
+function getQdrantConfig() {
+  const apiKey = process.env.QDRANT_API_KEY;
+  const url = process.env.QDRANT_URL;
+  const collectionName = process.env.QDRANT_DB_COLLECTION_NAME;
 
-if (!URL || !API_KEY || !COLLECTION_NAME) {
-  throw new Error(
-    "Qdrant URL, API key, and collection name must be set in environment variables",
-  );
+  if (!url || !apiKey || !collectionName) {
+    throw new Error(
+      "Qdrant URL, API key, and collection name must be set in environment variables",
+    );
+  }
+
+  return { apiKey, url, collectionName };
 }
 
-const qadrantClient = new QdrantClient({
-  url: URL,
-  apiKey: API_KEY,
-});
-
-const collectionName = COLLECTION_NAME;
+function getQdrantClient() {
+  const { apiKey, url } = getQdrantConfig();
+  return new QdrantClient({ url, apiKey });
+}
 
 export async function getVectorStore() {
-  try {
-    const vectorStore = await QdrantVectorStore.fromExistingCollection(
-      openaiEmbeddings,
-      {
-        apiKey: API_KEY,
-        url: URL,
-        collectionName,
-        collectionConfig: {
-          vectors: {
-            distance: "Cosine",
-            size: 100,
-          },
+  const { apiKey, url, collectionName } = getQdrantConfig();
+  const openaiEmbeddings = getOpenAIEmbeddings();
+
+  const vectorStore = await QdrantVectorStore.fromExistingCollection(
+    openaiEmbeddings,
+    {
+      apiKey,
+      url,
+      collectionName,
+      collectionConfig: {
+        vectors: {
+          distance: "Cosine",
+          size: 100,
         },
       },
-    );
-    return vectorStore;
-  } catch (error) {
-    console.error("Error getting vector store:", error);
-    throw new Error("Failed to get vector store");
-  }
+    },
+  );
+
+  return vectorStore;
 }
 
 export const getEmbeddingCollections = async () => {
+  const { collectionName } = getQdrantConfig();
+  const qadrantClient = getQdrantClient();
+
   const collectionExists = await qadrantClient.collectionExists(collectionName);
 
   if (!collectionExists) {

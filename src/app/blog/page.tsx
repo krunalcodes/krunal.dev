@@ -4,6 +4,7 @@ import { SearchInput } from "../../components/blog/search-input";
 import { allBlogs } from "contentlayer/generated";
 import { generatePageMetadata } from "../seo";
 import { ENV } from "@/lib/env";
+import { Suspense } from "react";
 
 export const metadata = generatePageMetadata({
   title: "Blog",
@@ -58,15 +59,19 @@ export default async function Blog({
               Blog
             </h1>
             <p className="text-muted-foreground max-w-3xl text-sm md:text-base">
-              Thoughts on software development, web technologies, Generative AI, and
-              engineering practices.
+              Thoughts on software development, web technologies, Generative AI,
+              and engineering practices.
             </p>
           </div>
-          <SearchInput />
+          <Suspense fallback={<div className="h-10" />}>
+            <SearchInput />
+          </Suspense>
         </div>
 
         <div className="max-w-5xl">
-          <AnimatedBlogList posts={currentPosts} />
+          <Suspense fallback={<div className="h-24" />}>
+            <AnimatedBlogList posts={currentPosts} />
+          </Suspense>
         </div>
       </section>
       {totalPages > 1 && (

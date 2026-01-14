@@ -30,7 +30,7 @@ export function Footer() {
 
         <div className="space-y-2 text-sm text-muted-foreground">
           <p>
-            © {new Date().getFullYear()}{" "}
+            &copy; 2026{" "}
             <a
               href={siteMetadata.social.x}
               target="_blank"
