@@ -1,0 +1,28 @@
+[
+  {
+    "title": "Welcome to My Blog",
+    "publishedAt": "2026-01-14",
+    "summary": "A brief introduction to what you can expect from this blog about web development, coding, and building things on the internet.",
+    "draft": false,
+    "body": {
+      "raw": "\nWelcome! I'm excited to finally launch this blog and share my journey as a developer with you.\n\n## What to Expect\n\nThis blog will be a space where I write about:\n\n- **Web development** — Tips, tricks, and lessons learned from building real projects\n- **Code snippets** — Useful solutions to common problems I encounter\n- **Tech stack explorations** — Deep dives into tools and frameworks I'm using\n- **Project stories** — Behind-the-scenes looks at what I'm building and why\n\n## Why I'm Writing\n\nI believe in learning in public and sharing knowledge. If something I write helps even one person solve a problem or learn something new, that's a win.\n\nThis blog is also a way for me to document my own learning journey. Writing helps me think more clearly and understand concepts better.\n\n## What's Next?\n\nI'm planning to write about the technologies I'm currently working with, interesting bugs I've solved, and projects I'm excited about. Expect a mix of tutorials, reflections, and practical guides.\n\nThanks for reading, and I hope you'll stick around! Feel free to reach out if you have questions or suggestions for topics you'd like me to cover.\n",
+      "code": "var Component=(()=>{var m=Object.create;var r=Object.defineProperty;var p=Object.getOwnPropertyDescriptor;var u=Object.getOwnPropertyNames;var g=Object.getPrototypeOf,w=Object.prototype.hasOwnProperty;var b=(t,e)=>()=>(e||t((e={exports:{}}).exports,e),e.exports),f=(t,e)=>{for(var o in e)r(t,o,{get:e[o],enumerable:!0})},l=(t,e,o,s)=>{if(e&&typeof e==\"object\"||typeof e==\"function\")for(let i of u(e))!w.call(t,i)&&i!==o&&r(t,i,{get:()=>e[i],enumerable:!(s=p(e,i))||s.enumerable});return t};var x=(t,e,o)=>(o=t!=null?m(g(t)):{},l(e||!t||!t.__esModule?r(o,\"default\",{value:t,enumerable:!0}):o,t)),y=t=>l(r({},\"__esModule\",{value:!0}),t);var c=b((j,a)=>{a.exports=_jsx_runtime});var k={};f(k,{default:()=>d,frontmatter:()=>I});var n=x(c()),I={title:\"Welcome to My Blog\",summary:\"A brief introduction to what you can expect from this blog about web development, coding, and building things on the internet.\",type:\"Blog\",publishedAt:\"2026-01-14\"};function h(t){let e={a:\"a\",h2:\"h2\",li:\"li\",p:\"p\",span:\"span\",strong:\"strong\",ul:\"ul\",...t.components};return(0,n.jsxs)(n.Fragment,{children:[(0,n.jsx)(e.p,{children:\"Welcome! I'm excited to finally launch this blog and share my journey as a developer with you.\"}),`\n`,(0,n.jsxs)(e.h2,{id:\"what-to-expect\",children:[(0,n.jsx)(e.a,{className:\"anchor\",href:\"#what-to-expect\",children:(0,n.jsx)(e.span,{className:\"icon icon-link\"})}),\"What to Expect\"]}),`\n`,(0,n.jsx)(e.p,{children:\"This blog will be a space where I write about:\"}),`\n`,(0,n.jsxs)(e.ul,{children:[`\n`,(0,n.jsxs)(e.li,{children:[(0,n.jsx)(e.strong,{children:\"Web development\"}),\" \\u2014 Tips, tricks, and lessons learned from building real projects\"]}),`\n`,(0,n.jsxs)(e.li,{children:[(0,n.jsx)(e.strong,{children:\"Code snippets\"}),\" \\u2014 Useful solutions to common problems I encounter\"]}),`\n`,(0,n.jsxs)(e.li,{children:[(0,n.jsx)(e.strong,{children:\"Tech stack explorations\"}),\" \\u2014 Deep dives into tools and frameworks I'm using\"]}),`\n`,(0,n.jsxs)(e.li,{children:[(0,n.jsx)(e.strong,{children:\"Project stories\"}),\" \\u2014 Behind-the-scenes looks at what I'm building and why\"]}),`\n`]}),`\n`,(0,n.jsxs)(e.h2,{id:\"why-im-writing\",children:[(0,n.jsx)(e.a,{className:\"anchor\",href:\"#why-im-writing\",children:(0,n.jsx)(e.span,{className:\"icon icon-link\"})}),\"Why I'm Writing\"]}),`\n`,(0,n.jsx)(e.p,{children:\"I believe in learning in public and sharing knowledge. If something I write helps even one person solve a problem or learn something new, that's a win.\"}),`\n`,(0,n.jsx)(e.p,{children:\"This blog is also a way for me to document my own learning journey. Writing helps me think more clearly and understand concepts better.\"}),`\n`,(0,n.jsxs)(e.h2,{id:\"whats-next\",children:[(0,n.jsx)(e.a,{className:\"anchor\",href:\"#whats-next\",children:(0,n.jsx)(e.span,{className:\"icon icon-link\"})}),\"What's Next?\"]}),`\n`,(0,n.jsx)(e.p,{children:\"I'm planning to write about the technologies I'm currently working with, interesting bugs I've solved, and projects I'm excited about. Expect a mix of tutorials, reflections, and practical guides.\"}),`\n`,(0,n.jsx)(e.p,{children:\"Thanks for reading, and I hope you'll stick around! Feel free to reach out if you have questions or suggestions for topics you'd like me to cover.\"})]})}function d(t={}){let{wrapper:e}=t.components||{};return e?(0,n.jsx)(e,{...t,children:(0,n.jsx)(h,{...t})}):h(t)}return y(k);})();\n;return Component;"
+    },
+    "_id": "welcome-to-my-blog.mdx",
+    "_raw": {
+      "sourceFilePath": "welcome-to-my-blog.mdx",
+      "sourceFileName": "welcome-to-my-blog.mdx",
+      "sourceFileDir": ".",
+      "contentType": "mdx",
+      "flattenedPath": "welcome-to-my-blog"
+    },
+    "type": "Blog",
+    "slug": "welcome-to-my-blog",
+    "readingTime": {
+      "text": "1 min read",
+      "minutes": 0.97,
+      "time": 58200,
+      "words": 194
+    }
+  }
+]
