@@ -42,10 +42,10 @@ export default function Head() {
       />
       <link rel="alternate" type="application/rss+xml" href="/feed.xml" />
       <meta content="width=device-width, initial-scale=1" name="viewport" />
-      <meta
+      {/* <meta
         name="google-site-verification"
         content="br9AjaAyJgS4OVigpXtHmm2DwdzuzMqzpK4G77lD2TY"
-      />
+      /> */}
 
       <meta
         name="google-adsense-account"
