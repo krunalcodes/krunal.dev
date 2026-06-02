@@ -4,9 +4,9 @@ export const siteMetadata = {
   siteUrl: "https://krunal.dev",
   socialBanner: "/_static/default-og-card.png",
   description:
-    "Krunal Shah - Fullstack developer passionate about creating and sharing things on internet",
+    "Krunal Shah — Solution Architect with 9 years building scalable platforms, AI-native SaaS, and teams. Remote-friendly. Billions of requests/month. SOC2/GDPR.",
   keywords: [
-    `Krunal Shah, Krunal, Shah, krunalcodes, Krunal Codes, Krunal Shah, Krunal, Shah, krunal.dev, krunal, shah, krunalcodes`,
+    `Krunal Shah, Solution Architect, krunalcodes, remote engineer, Next.js, Node.js, Kubernetes, AWS, AI SaaS, technical consultant, krunal.dev`,
   ],
   social: {
     email: "hi@krunal.dev",

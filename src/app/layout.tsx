@@ -4,8 +4,7 @@ import { cn } from "@/lib/utils";
 import { ThemeProvider } from "@/components/theme-provider";
 import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
-import { TailwindIndicator } from "@/components/tailwind-indicator";
-import { Space_Grotesk } from "next/font/google";
+import { Space_Grotesk, Syne } from "next/font/google";
 import { siteMetadata } from "@/data/siteMetadata";
 import Head from "./head";
 import { ENV } from "@/lib/env";
@@ -17,6 +16,12 @@ const space_grotesk = Space_Grotesk({
   subsets: ["latin"],
   display: "swap",
   variable: "--font-space-grotesk",
+});
+
+const syne = Syne({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-syne",
 });
 
 export const metadata: Metadata = {
@@ -63,8 +68,9 @@ export default function RootLayout({
       <Head />
       <body
         className={cn(
-          "mx-auto min-h-screen max-w-3xl antialiased dark:bg-zinc-950 dark:text-gray-100",
+          "mx-auto min-h-screen max-w-6xl antialiased dark:bg-zinc-950 dark:text-gray-100",
           space_grotesk.className,
+          syne.variable,
         )}
       >
         <ThemeProvider
@@ -80,7 +86,6 @@ export default function RootLayout({
             <Footer />
             <Toaster position="top-right" richColors />
           </main>
-          <TailwindIndicator />
         </ThemeProvider>
         <GoogleAnalytics gaId={ENV.GOOGLE_ANALYTICS_ID} />
       </body>

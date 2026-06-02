@@ -27,8 +27,8 @@
   }
 
   .dark {
-    --background: 0 0% 7%;
-    --foreground: 0 0% 95%;
+    --background: 0 0% 5%;
+    --foreground: 0 0% 96%;
     --card: 0 0% 7%;
     --card-foreground: 0 0% 95%;
     --popover: 0 0% 7%;
@@ -58,6 +58,21 @@
     font-feature-settings:
       "rlig" 1,
       "calt" 1;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+}
+
+@layer utilities {
+  .font-display {
+    font-family: var(--font-syne), var(--font-space-grotesk), system-ui, sans-serif;
   }
 }
 

@@ -15,6 +15,11 @@ module.exports = {
   			sans: [
   				'var(--font-space-grotesk)',
                     ...fontFamily.sans
+                ],
+  			display: [
+  				'var(--font-syne)',
+  				'var(--font-space-grotesk)',
+                    ...fontFamily.sans
                 ]
   		},
   		typography: {

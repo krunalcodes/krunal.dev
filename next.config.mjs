@@ -10,7 +10,12 @@ const nextConfig = {
     return [
       {
         source: "/resume",
-        destination: "https://linkedin.com/in/krunalcodes",
+        destination: "/Resume%202026.pdf",
+        permanent: false,
+      },
+      {
+        source: "/projects",
+        destination: "/work",
         permanent: true,
       },
     ];
